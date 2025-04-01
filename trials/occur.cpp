@@ -1,18 +1,19 @@
 #include <iostream>
+#include <vector>
+
+using namespace std;
 
 template<class Ta,class Tb>
-int occur(const Ta& arr,const Tb& item){
+int occur(const vector<Ta>& arr,const Tb& value){
     int count=0;
-    int size=sizeof(arr)/sizeof(arr[0]);
-    for(int i=0;i<size;i++){
-        if(arr[i]== item) count++ ;
+    for(int i=0;i<arr.size();i++){
+        if(arr[i]==value) count++;
     }
     return count;
 }
 
-using namespace std;
-
 int main(){
-    int arr[]={1,2,3,34,4,3,23,22,12,3,4,4,4,4};
-    cout<<"(4) occurs "<<occur(arr,4)<<" times\n";
+    vector<int> a ={1,2,3,4,4,4,45,5,4,78};
+    cout<<"(4) appears "<<occur<int,int>(a,4)<<" times.\n";
+    return 0;
 }
