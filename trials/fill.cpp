@@ -12,7 +12,7 @@ void fill(Ta& arr,Tv value){
 }
 
 template<class Ta>
-void printarray(Ta& arr){
+void printarray(const Ta& arr){
     int size = sizeof(arr)/sizeof(arr[0]);
     for(int i=0;i<size;i++){
         cout<<arr[i];
