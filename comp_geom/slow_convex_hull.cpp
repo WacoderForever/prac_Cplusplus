@@ -28,9 +28,12 @@ vector<Point> slow_convex_hull(const vector<Point>& points){
     int n = points.size();
     for(int i=0;i<n;i++){
         for(int j=i+1;j<n;j++){
-            if(isHullEdge(points[i],points[j],points)) hull.push_back(points[i]);
+            if(isHullEdge(points[i],points[j],points)){
+                hull.push_back(points[i]);
+            }
         }
     }
+
     return hull;
 }
 
